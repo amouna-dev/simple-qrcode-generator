@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #021841;
+}
+.wrapper{
+    background-color: #fff;
+    max-width: 800px;
+    border-radius: 7px;
+    padding: 16px 25px;
+    height: 300px;
+}
+.wrapper.active{
+    height: 540px;
+}
+.header h2{
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center;
+    color: #2788F8;
+}
+.header p{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #474747;
+}
+.header .image-title {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+}
+.header .image-title img{
+    width: 100%;
+}
+.wrapper form{
+    margin: 20px 0 25px;
+}
+form :where(input, button){
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+}
+form button {
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #2788F8;
+    color: #fff;
+    cursor: pointer;
+}
+form input{
+    border: 1px solid #eee;
+    font-size: 18px;
+    padding: 0 17px;
+}
+.wrapper .qr-code{
+    border: 1px solid #CBCBCB;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
